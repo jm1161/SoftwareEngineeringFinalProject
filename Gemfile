@@ -27,7 +27,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'coffee-script-source', '1.8.0'
-gem 'bcrypt', platforms: :ruby
+gem 'bcrypt', git: 'https//github.com/codahale/bcrypt-ruby.git', :require => 'bcrypt'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
