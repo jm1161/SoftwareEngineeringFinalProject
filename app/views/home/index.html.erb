@@ -1,38 +1,40 @@
-<h1><center>Welcome</center></h1>
-<h1><center> to University Book Trades!</center></h1>
+ <main role="main">
 
+        <!-- Jumbotron -->
+        <div class="jumbotron">
+          <h1><center>Welcome</center></h1>
+          <h1><center>to University Book Trades!</center></h1>
+          <p class="lead">Join what everyone is talking about now! Simple, easy and fast!</p>
+          <p><a class="btn btn-lg btn-success" href="/users/sign_up?" role="button">Get started today</a></p>
+        </div>
 
-<div class="row">
-  <div class="col-sm">
-    <center> <b>About Us</b> </center>
-      University Trades was website established in 2017 by founders Huvence Guerrero and Jesus Morales. Our goal is to make the average college student save money and gain money all in one website. We give you the option to sell and buy books through our website with unlimited free posts. The buyer saves money due to reduced pricing compared to your school bookstore and the seller gets some extra cash as well.
-  </div>
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>About Us</h2>
+            <p>University Trades was website established in 2017 by founders Huvence Guerrero and Jesus Morales. Our goal is to make the average college student save money and gain money all in one website. We give you the option to sell and buy books through our website with unlimited free posts. The buyer saves money due to reduced pricing compared to your school bookstore and the seller gets some extra cash as well.</p>
+            <p><a class="btn btn-primary" href="#" role="button">Change bottons to images? &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Problems Solved</h2>
+            <p>We have solved the problems that come with online trading and buying off your classmates in other websites. Since we are both college students we sat down to fix all the problems we had while buying books in similar websites. One of the biggest problems with these was live newsfeed making books disappear in the feed minutes after the buyer posts the item. Here at University Trades we compare the name and ID of the book you are trying to buy and we send you to the sellers that have the book you are seeking.</p>
+            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Payment Options</h2>
+            <p>Yet another reason why to use our website is the ability to pay online via PayPal, Apple Pay and traditional debit card making things faster and easier. You  will be able to buy books from sellers without the hassle of going to the bank and waiting those long lines of taking out cash. We have given you the option to pay the seller online with your choice of payment. This online payment will have a low fee of 5% of what the item is sold at.</p>
+            <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+          </div>
+        </div>
 
-  <div class="col-sm">
-    <center> <b>Problems Solved</b></center>
-    We have solved the problems that come with online trading and buying off your classmates in other websites. Since we are both college students we sat down to fix all the problems we had while buying books in similar websites. One of the biggest problems with these was live newsfeed making books disappear in the feed minutes after the buyer posts the item. Here at University Trades we compare the name and ID of the book you are trying to buy and we send you to the sellers that have the book you are seeking.
-</div>
+      </main>
 
-  <div class="col-sm">
-    <center><b> Payment Options </b></center>
-    Yet another reason why to use our website is the ability to pay online via PayPal, Apple Pay and traditional debit card making things faster and easier. You  will be able to buy books from sellers without the hassle of going to the bank and waiting those long lines of taking out cash. We have given you the option to pay the seller online with your choice of payment. This online payment will have a low fee of 5% of what the item is sold at.
-  </div>
-</div>
-</br>
-<center> <b>Sign up and start posting for free!</b></center><br>
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Company 2017</p>
+      </footer>
 
-<center>
- <% if user_signed_in? %>
-        <a><%= button_to "Sign out now!",  destroy_user_session_path, :method => :delete, class: "btn btn-primary"%></a>
-        <% else %>
-        <a><%= button_to "Sign up now!",  new_user_registration_path, :method => :get, class: "btn btn-primary"%></a><br>
-        <% end %>
-    </br>
-</center>
-
-<!-- < render "users/sessions/application" %> -->
-
-
+    </div> <!-- /container -->
 
 
 
