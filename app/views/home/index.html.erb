@@ -19,11 +19,20 @@
   </div>
 </div>
 </br>
-<center> <b>Sign up and start posting for free!</b></center>
+<center> <b>Sign up and start posting for free!</b></center><br>
 
+<center>
+ <% if user_signed_in? %>
+        <a><%= button_to "Sign out now!",  destroy_user_session_path, :method => :delete, class: "btn btn-primary"%></a>
+        <% else %>
+        <a><%= button_to "Sign up now!",  new_user_registration_path, :method => :get, class: "btn btn-primary"%></a><br>
 
+        Already registered?
+        <a><%= button_to "Sign in now!",  new_user_session_path, :method => :get, class: "btn btn-primary"%></a>
+        <% end %>
+</center>
 
-<%= render "users/sessions/new" %> 
+<!-- < render "users/sessions/application" %> -->
 
  
 
