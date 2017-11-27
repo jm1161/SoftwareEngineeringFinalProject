@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'cart/index'
+
   	devise_for :views
   	get '/', to: "home#index"
   	get '/buy_books/index', to: "buy_books#index"
