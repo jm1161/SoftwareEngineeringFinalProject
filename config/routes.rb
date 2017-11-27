@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'support/index'
+
   get 'cart/index'
 
   	devise_for :views
