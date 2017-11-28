@@ -36,9 +36,6 @@
               <li class="nav-item">
                 <a class="nav-link" href="/sell_books/index">Sell Books</a>
               </li>
-  
-                
-
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My account</a>
@@ -48,7 +45,7 @@
                   <a class="dropdown-item" href="support/index">Support</a>
 
                  <a class="dropdown-item" <% if user_signed_in? %> <%= link_to "Sign out",  destroy_user_session_path, :method => :delete, class: "nav-link"%>
-                  <% else %> <a><%= link_to "Sign in",  new_user_session_path, :method => :get, class: "nav-link"%></a>
+                  <% else %> <a class="dropdown-item"<%= link_to "Sign in",  new_user_session_path, :method => :get, class: "nav-link"%></a>
                   <%end%>
                  </a>
 
