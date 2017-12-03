@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
 
-  get 'support/index'
 
-  get 'cart/index'
+	get '/', to: "home#index"
+	get '/buy_books', to: "home#buy_books"
+	get '/sell_books', to: "home#sell_books"
+	get '/support', to: "home#support"
+	
+	get "/admin/index", to: "admin#index"
 
-  	devise_for :views
-  	get '/', to: "home#index"
-  	get '/buy_books/index', to: "buy_books#index"
-  	get '/sell_books/index', to: "sell_books#index"
-
+	devise_for :views
   	devise_for :users
-  	get "/admin/index", to: "admin#index"
+  
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
