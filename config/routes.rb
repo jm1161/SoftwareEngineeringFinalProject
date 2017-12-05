@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 #####################################################
 
-	resources :books
+	
 	devise_for :views
   	devise_for :users
   
