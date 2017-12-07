@@ -5,11 +5,8 @@ class HomeController < ApplicationController
   def index
   end
 
-  def buy_books
-  end
-
-  def sell_books
-  end
+ def search
+ end
 
   def support
   end

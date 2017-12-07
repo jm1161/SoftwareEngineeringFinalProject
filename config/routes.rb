@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
 
 
-  get 'search/index'
+ 
 
 #####################################################
 
 	get '/', to: "home#index"
-	get '/buy_books', to: "home#buy_books"
-	get '/sell_books', to: "home#sell_books"
+	get '/search', to: "home#search"
 	get '/support', to: "home#support"
 
 #####################################################	
