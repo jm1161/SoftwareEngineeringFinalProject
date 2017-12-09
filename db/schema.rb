@@ -10,9 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20171205195509) do
 
   create_table "Users", force: :cascade do |t|
+=======
+ActiveRecord::Schema.define(version: 20171124231700) do
+
+  create_table "users", force: :cascade do |t|
+>>>>>>> parent of f4b2927... created books scaffold
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
