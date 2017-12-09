@@ -4,4 +4,13 @@ class AdminController < ApplicationController
 
 	def index
 	end
+
+
+	private
+
+	def admin_only!
+		if !current_user.admin?
+			redirect_to "/"
+		end
+	end
 end
