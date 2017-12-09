@@ -1,9 +1,7 @@
 class HomeController < ApplicationController
-	before_action :authenticate_user! , only: [:buy_books, :sell_books]
-
-
   def index
   end
+<<<<<<< HEAD
 
  def search
  end
@@ -11,4 +9,6 @@ class HomeController < ApplicationController
   def support
   end
 
+=======
+>>>>>>> parent of 8c074f0... code cleanup, removed extra controllers
 end
