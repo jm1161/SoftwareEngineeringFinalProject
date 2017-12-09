@@ -3,10 +3,14 @@ Rails.application.routes.draw do
 
  
 
+ 
 #####################################################
 
 	get '/', to: "home#index"
-	get '/search', to: "home#search"
+	get '/buy', to: "books#index"
+	get '/sell', to: "books#new"
+	get '/landing', to: "books#index"
+	get '/user', to: "home#userLanding"
 	get '/support', to: "home#support"
 
 #####################################################	
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
 
 #####################################################
 
-	
+	resources :books
 	devise_for :views
   	devise_for :users
   
