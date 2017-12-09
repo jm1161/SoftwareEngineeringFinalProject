@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-<<<<<<< HEAD
  	
 
   protected
@@ -11,6 +10,4 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
-=======
->>>>>>> parent of f4b2927... created books scaffold
 end
