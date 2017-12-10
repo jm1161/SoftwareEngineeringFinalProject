@@ -10,17 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171209204227) do
+ActiveRecord::Schema.define(version: 20171210023755) do
 
   create_table "books", force: :cascade do |t|
-    t.string "title"
-    t.string "subtitle"
-    t.string "author"
-    t.integer "edition"
-    t.integer "isbn"
-    t.float "price"
-    t.string "condition"
-    t.integer "user_id"
+    t.string "brand"
+    t.string "name"
+    t.string "price"
+    t.string "url"
+    t.string "image"
+    t.string "asin"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "haves", force: :cascade do |t|
+    t.string "user_id"
+    t.string "book_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -58,6 +63,13 @@ ActiveRecord::Schema.define(version: 20171209204227) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_views_on_email", unique: true
     t.index ["reset_password_token"], name: "index_views_on_reset_password_token", unique: true
+  end
+
+  create_table "wants", force: :cascade do |t|
+    t.string "user_id"
+    t.string "book_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

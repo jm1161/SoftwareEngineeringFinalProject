@@ -4,15 +4,16 @@ Rails.application.routes.draw do
  
 
  
+  resources :books
 #####################################################
 
 	get '/', to: "home#index"
-	get '/buy', to: "books#index"
-	get '/sell', to: "books#new"
-	get '/landing', to: "books#index"
-	get '/user', to: "home#userLanding"
+	get '/search', to: "home#search"
+	get '/want', to: "home#want"
+	get '/have', to: "home#have"
+	get '/user', to: "home#landing"
 	get '/support', to: "home#support"
-
+	post '/results', to: "home#results"
 #####################################################	
 
 	get "/admin/index", to: "admin#index"

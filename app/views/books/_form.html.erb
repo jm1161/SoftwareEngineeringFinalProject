@@ -12,28 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title, id: :book_title %>
+    <%= form.label :brand %>
+    <%= form.text_field :brand, id: :book_brand %>
   </div>
 
   <div class="field">
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, id: :book_subtitle %>
-  </div>
-
-  <div class="field">
-    <%= form.label :author %>
-    <%= form.text_field :author, id: :book_author %>
-  </div>
-
-  <div class="field">
-    <%= form.label :edition %>
-    <%= form.number_field :edition, id: :book_edition %>
-  </div>
-
-  <div class="field">
-    <%= form.label :isbn %>
-    <%= form.number_field :isbn, id: :book_isbn %>
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :book_name %>
   </div>
 
   <div class="field">
@@ -42,13 +27,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :condition %>
-    <%= form.text_field :condition, id: :book_condition %>
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :book_url %>
   </div>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id, id: :book_user_id %>
+    <%= form.label :image %>
+    <%= form.text_field :image, id: :book_image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :asin %>
+    <%= form.text_field :asin, id: :book_asin %>
   </div>
 
   <div class="actions">

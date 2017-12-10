@@ -17,7 +17,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create book" do
     assert_difference('Book.count') do
-      post books_url, params: { book: { author: @book.author, condition: @book.condition, edition: @book.edition, isbn: @book.isbn, price: @book.price, subtitle: @book.subtitle, title: @book.title, user_id: @book.user_id } }
+      post books_url, params: { book: { asin: @book.asin, brand: @book.brand, image: @book.image, name: @book.name, price: @book.price, url: @book.url } }
     end
 
     assert_redirected_to book_url(Book.last)
@@ -34,7 +34,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update book" do
-    patch book_url(@book), params: { book: { author: @book.author, condition: @book.condition, edition: @book.edition, isbn: @book.isbn, price: @book.price, subtitle: @book.subtitle, title: @book.title, user_id: @book.user_id } }
+    patch book_url(@book), params: { book: { asin: @book.asin, brand: @book.brand, image: @book.image, name: @book.name, price: @book.price, url: @book.url } }
     assert_redirected_to book_url(@book)
   end
 

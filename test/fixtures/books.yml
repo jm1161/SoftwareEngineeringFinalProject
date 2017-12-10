@@ -1,21 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  subtitle: MyString
-  author: MyString
-  edition: 1
-  isbn: 1
-  price: 1.5
-  condition: MyString
-  user_id: 1
+  brand: MyString
+  name: MyString
+  price: MyString
+  url: MyString
+  image: MyString
+  asin: MyString
 
 two:
-  title: MyString
-  subtitle: MyString
-  author: MyString
-  edition: 1
-  isbn: 1
-  price: 1.5
-  condition: MyString
-  user_id: 1
+  brand: MyString
+  name: MyString
+  price: MyString
+  url: MyString
+  image: MyString
+  asin: MyString
