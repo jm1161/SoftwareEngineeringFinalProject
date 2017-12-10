@@ -5,14 +5,34 @@
 </head>
 <body>
 	
-	<h1>ItemSearch#index</h1>
-	<p>Find me in app/views/item_search/index.html.erb</p>
-
+	<h1>Welcome Back <%= current_user.email %>!</h1>
+	
 <center>
-	<form action="/create" method="post" target="_blank">
-	<input type="text" name="search" placeholder="Search..">
-	<a href="/">Submit</a>
+	<div class="container">
+  <div class="row">
+    <div class="col">
+      <p>Books you posted for sale</p>
+
+     <% if @toSell == nil %>
+      <% @toSell.each do |w| %>
+		<%= w.book.title %>
+		<%end%>
+		<%else%>
+		<p>You have not posted any books for sale</p>
+
+		<%end%>
+	
+
+
+    </div>
+    <div class="col">
+     <p>Books you posted to buy</p>
+    </div>
+  </div>
+</div>
 </center>
+
+
 
 </body>
 </html>

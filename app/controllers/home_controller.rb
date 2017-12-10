@@ -48,7 +48,13 @@ class HomeController < ApplicationController
   end
 
   def userLanding
+     
+      @toSell = Have.find(user_id: current_user.id)
   end
+
+   
+    
+  
 
   def support
   end

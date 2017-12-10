@@ -11,7 +11,7 @@ Rails.application.routes.draw do
 	get '/search', to: "home#search"
 	get '/want', to: "home#want"
 	get '/have', to: "home#have"
-	get '/user', to: "home#landing"
+	get '/user', to: "home#userLanding"
 	get '/support', to: "home#support"
 	post '/results', to: "home#results"
 #####################################################	
