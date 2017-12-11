@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 	post '/results', to: "home#results"
 #####################################################	
 
-	get "/admin/index", to: "admin#index"
+	get "/admin", to: "books#index"
 
 #####################################################
 

@@ -27,21 +27,26 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav text-md-center nav-justified w-100">
+              <%if user_signed_in? %>
+              <li class="nav-item active">
+                <a class="nav-link" href="/user">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <%else %>
               <li class="nav-item active">
                 <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
+              <%end%>
+              
               <li class="nav-item">
-                <a class="nav-link" href="/buy">Buy books!</a>
+                <a class="nav-link" href="/search">Search</a>
                  
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/sell">Sell books!</a>
-                 
-              </li>
+             
+              
 
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My account</a>
+                <a class="nav-link dropdown-toggle" href="/user" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">My account</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
 
                   

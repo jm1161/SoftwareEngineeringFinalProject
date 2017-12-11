@@ -1,37 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	
 </head>
 <body>
-	
-	<h1>Welcome Back <%= current_user.email %>!</h1>
-	
-<center>
-	<div class="container">
-  <div class="row">
-    <div class="col">
-      <p>Books you posted for sale</p>
 
-     <% if @toSell == nil %>
-      <% @toSell.each do |w| %>
-		<%= w.book.title %>
-		<%end%>
-		<%else%>
-		<p>You have not posted any books for sale</p>
+	<p>Books you want to buy</p>
+	<%if @wants.count != 0 %>
+	<% @wants.each do |w| %>
 
-		<%end%>
-	
+	<p><%= w.book.name %></p>
 
-
-    </div>
-    <div class="col">
-     <p>Books you posted to buy</p>
-    </div>
-  </div>
-</div>
-</center>
-
+	<%end%>
+	<%else%>
+		<p>Currently you are not buying anybooks</p>
+		
+	<%end%>
+	<a href="/search">Search to buy</a>
 
 
 </body>

@@ -1,4 +1,23 @@
-<% @haves.each do |h| %>
-<%= h.user.email %>
+<!DOCTYPE html>
+<html>
+<head>
+	
+</head>
+<body>
+	<%if @haves.count != 0 %>
+	<h3>Congratulation <% current_user.email%> you found a match!</h3>
+	<h4>Email the user(s) who you prefer!</h4>
+	<br>	
+		<% @haves.each do |h| %>
+			<a><%= h.user.email %></a>
+	<%end%>
+	<%else%>
+		<p>Sorry at this time no one is selling this book</p>
+		
+	<%end%>
+	<a href="/search">Continue searching </a>
+</body>
+</html>
 
-<% end %>
+
+

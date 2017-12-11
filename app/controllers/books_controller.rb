@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   before_action :set_book, only: [:show, :edit, :update, :destroy]
-
+  before_action :admin_only!, only: [:index, :show, :edit, :update, :destroy]
   # GET /books
   # GET /books.json
   def index

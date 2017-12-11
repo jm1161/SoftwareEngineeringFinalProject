@@ -39,6 +39,12 @@ class HomeController < ApplicationController
     @wants = Want.all.where(book_id: @book.id)
 
   end
+
+  def userLanding
+   
+    @wants = Want.all.where(user_id: current_user.id)     
+      
+  end
  
   private
 
@@ -47,10 +53,7 @@ class HomeController < ApplicationController
     @book = Book.find(params[:book_id])
   end
 
-  def userLanding
-     
-      @toSell = Have.find(user_id: current_user.id)
-  end
+  
 
    
     
