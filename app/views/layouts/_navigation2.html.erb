@@ -37,13 +37,6 @@
               </li>
               <%end%>
               
-              <li class="nav-item">
-                <a class="nav-link" href="/search">Search</a>
-                 
-              </li>
-             
-              
-
               </li>
                <li class="nav-item">
               <a class="nav-link" href="/support">Support</a>
@@ -57,6 +50,12 @@
                      <%= link_to "Sign in",  new_user_session_path, :method => :get, class: "nav-link"%>
 
                    <%end%>
+                   <li class="nav-item">
+                  <form action="/results" method="post">
+                   <input type="text" name="search">
+                <input type="submit" value="Search" <button type="button" class="btn btn-outline-primary"></button>
+                </form>
+                  </li>
                 </a>
                  
               </li>
