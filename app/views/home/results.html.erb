@@ -5,28 +5,37 @@
 </head>
 <body>
 
-	<% @results.each do |item| %>
-<div>
-	<image src="<%= item.image%>"></image>
-	<h1>Title: <%= item.name%> </h1>	
-	<p>Author: <%= item.brand%>  </p>
-	<b> Price: US <%= item.price%> </b>
-	<p>ASIN: <%= item.asin%> </p>
-
-	<a href="/want?book_id=<%= item.id %>" class="btn btn-primary" id="shop"> Want</a>
-
-	<a href="/have?book_id=<%= item.id %>" class="btn btn-primary" id="shop"> Sell</a>
 	
-</div>
+
 	
 	
 	
 
+	<div class="row">
+
+		<br><br><br>
+
+		<% @results.each do |item| %>
+
+          <div class="col-lg-4">
+            <img class="rounded-circle" src="<%=item.image%>" alt="Sorry no image available" width="140" height="140">
+
+            <h2> <%= item.name%></h2>
+            <p><%= item.brand %></p>
+            <a href="/want?book_id=<%= item.id %>" class="btn btn-primary" id="shop"> Want</a>
+			<a href="/have?book_id=<%= item.id %>" class="btn btn-primary" id="shop"> Sell</a>
+            
+          </div>
+
+          <%end%>
+    </div>
+
+
+
+
+
+
 	
-
-
-
-	<%end%>
 
 </body>
 </html>

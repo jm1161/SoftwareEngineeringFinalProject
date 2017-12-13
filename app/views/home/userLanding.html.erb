@@ -8,12 +8,12 @@
 	<h1>Hello welcome back - <%= current_user.email %></h1>
 	<br><br>
 
-	<center><h2>Books you want to buy</h2></center>
+	
 
 
 <%if @wants.count != 0 %>
  
-
+<center><h2>Books you want to buy</h2></center>
 <table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
@@ -37,7 +37,7 @@
 
 
 	<%else%>
-		<p>Currently you are not buying anybooks</p>
+		<center><p>Currently you are not buying any books</p></center>
 
 <%end%>
 
@@ -48,14 +48,14 @@
 
 
 	
-	<a href="/search">Search to buy</a>
+	<center><input href="/search" type="submit" value="Search to buy" class="btn btn-outline-primary"></input></center><br>
 
 
 
-
-	<center><h2>Books you want to sell</h2></center>
+	
 	<%if @haves.count != 0 %>
 
+<center><h2>Books you want to sell</h2></center>
 	<table class="table table-bordered">
   <thead class="thead-dark">
     <tr>
@@ -79,12 +79,12 @@
 
 
 	<%else%>
-		<p>Currently you are not selling anybooks</p>
+		<center><p>Currently you are not selling any books</p></center>
 
 <%end%>
 
 
-	<a href="/search">Search to sell</a>
+	<center><input href="/search" value="Search to sell" type="submit" class="btn btn-outline-primary"></input></center>
 	<br><br>
 
 
