@@ -43,7 +43,8 @@ class HomeController < ApplicationController
   def userLanding
    
     @wants = Want.all.where(user_id: current_user.id)     
-      
+    @haves = Have.all.where(user_id: current_user.id)     
+
   end
  
   private
